@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart FD Finder</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-piggy-bank"></i> <span id="header-title">Smart FD Finder</span></h1>
+            <p class="subtitle" id="header-subtitle">Ask anything about Fixed Deposit Rates — AI will find the best option for you!</p>
+        </header>
+        
+        <div class="main-content">
+            <div class="input-group">
+                <label id="query-label">What would you like to know about FD rates?</label>
+                <input type="text" id="query" placeholder="e.g. Which bank offers the best FD rate for 2 years?" autofocus>
+                <button id="getResponse">
+                    <i class="fas fa-search"></i> <span id="button-text">Ask AI</span>
+                </button>
+            </div>
+            
+            <div class="example-queries">
+                <div class="example-title" id="examples-title">Quick Examples:</div>
+                <div class="examples" id="example-chips">
+                    <div class="example-chip">Best FD rates for senior citizens</div>
+                    <div class="example-chip">HDFC vs ICICI FD comparison</div>
+                    <div class="example-chip">Highest interest rate for 5 years</div>
+                    <div class="example-chip">Tax saving FD options</div>
+                </div>
+            </div>
+            
+            <div class="result-container" id="responseBox">
+                <div class="result-title">
+                    <i class="fas fa-lightbulb"></i> <span id="result-title">AI Response</span>
+                </div>
+                <div id="result">Your answer will appear here...</div>
+            </div>
+            
+            <p class="help-text">
+                <i class="fas fa-info-circle"></i> <span id="help-text">Ask clear questions for accurate results</span>
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // DOM elements
+        const queryInput = document.getElementById('query');
+        const resultDiv = document.getElementById('result');
+        const responseBox = document.getElementById('responseBox');
+        
+        // Add click handlers to example chips
+        document.querySelectorAll('.example-chip').forEach(chip => {
+            chip.addEventListener('click', () => {
+                queryInput.value = chip.textContent;
+                queryInput.focus();
+            });
+        });
+        
+        // Query submission
+        document.getElementById("getResponse").addEventListener("click", async function() {
+            const query = queryInput.value.trim();
+            
+            if (!query) {
+                alert("Please enter a question first");
+                return;
+            }
+            
+            // Show loading state
+            const button = document.getElementById("getResponse");
+            const originalContent = button.innerHTML;
+            button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Thinking...';
+            button.disabled = true;
+            
+            resultDiv.textContent = "🔍 Fetching answer...";
+            responseBox.style.display = 'block';
+            
+            try {
+                const response = await fetch("/query", {
+                    method: "POST",
+                    headers: {
+                        "Content-Type": "application/json"
+                    },
+                    body: JSON.stringify({ query: query })
+                });
+
+                const data = await response.json();
+                
+                if (data.error) {
+                    resultDiv.textContent = "❌ " + data.error;
+                } else {
+                    resultDiv.textContent = data.answer || "❌ No relevant answer found.";
+                }
+            } catch (error) {
+                resultDiv.textContent = "❌ Error fetching response. Please try again.";
+                console.error("Error:", error);
+            } finally {
+                // Reset button
+                button.innerHTML = originalContent;
+                button.disabled = false;
+            }
+        });
+        
+        // Allow pressing Enter to submit
+        queryInput.addEventListener('keypress', function(e) {
+            if (e.key === 'Enter') {
+                document.getElementById('getResponse').click();
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,50 @@
+Tenure,Senior Citizen Rate,Bank,Min_Tenure,Max_Tenure,Generalized Tenure
+7 to 45 Days,3.25%,ICICI Bank,7.0,45.0,Less than 1 month
+46 to 90 Days,4.5%,ICICI Bank,46.0,90.0,1 to 3 months
+91 to 184 Days,5%,ICICI Bank,91.0,184.0,3 to 6 months
+185 to < 1 Year,6%,ICICI Bank,365.0,365.0,6 months to 1 year
+1 Year to < 18 Months,6.75%,ICICI Bank,365.0,365.0,6 months to 1 year
+18 Months to 2 Years,6.9%,ICICI Bank,540.0,540.0,1 to 2 years
+2 Years 1 Day to 10 Years,"7.1%
+HIGHEST",ICICI Bank,1.0,3650.0,Over 5 years
+5Y (Tax Saver FD),"7.1%
+HIGHEST",ICICI Bank,,,Other
+Maturity Periods - Premature Withdrawal Allowed,Less than Rs.3 Crore#,Kotak Mahindra Bank,,,Other
+7 - 14 Days,3.25%,Kotak Mahindra Bank,7.0,14.0,Less than 1 month
+15 - 30 Days,3.25%,Kotak Mahindra Bank,15.0,30.0,Less than 1 month
+31 - 45 Days,3.50%,Kotak Mahindra Bank,31.0,45.0,1 to 3 months
+46 - 90 Days,4.00%,Kotak Mahindra Bank,46.0,90.0,1 to 3 months
+91 Days,5.50%,Kotak Mahindra Bank,91.0,91.0,3 to 6 months
+92 Days - 179 Days,4.75%,Kotak Mahindra Bank,92.0,92.0,3 to 6 months
+180 Days,6.25%,Kotak Mahindra Bank,180.0,180.0,3 to 6 months
+181 Days to 269 Days,6.00%,Kotak Mahindra Bank,181.0,181.0,6 months to 1 year
+270 Days,6.00%,Kotak Mahindra Bank,270.0,270.0,6 months to 1 year
+271 Days to 363 Days,6.50%,Kotak Mahindra Bank,271.0,271.0,6 months to 1 year
+364 Days,6.50%,Kotak Mahindra Bank,364.0,364.0,6 months to 1 year
+365 Days to 389 Days,6.75%,Kotak Mahindra Bank,365.0,365.0,6 months to 1 year
+390 Days (12 months 25 days),7.00%,Kotak Mahindra Bank,390.0,390.0,1 to 2 years
+391 Days - Less than 23 Months,7.10%,Kotak Mahindra Bank,391.0,391.0,1 to 2 years
+23 Months,7.10%,Kotak Mahindra Bank,690.0,690.0,1 to 2 years
+23 months 1 Day- less than 2 years,7.00%,Kotak Mahindra Bank,690.0,690.0,1 to 2 years
+2 years- less than 3 years,6.90%,Kotak Mahindra Bank,730.0,730.0,1 to 2 years
+3 years and above but less than 4 years,6.90%,Kotak Mahindra Bank,1095.0,1095.0,2 to 3 years
+4 years and above but less than 5 years,6.90%,Kotak Mahindra Bank,1460.0,1460.0,3 to 5 years
+5 years and above upto and inclusive of 10 years,6.75%,Kotak Mahindra Bank,1825.0,1825.0,3 to 5 years
+46 days to 179 days,5.40,SBI,46.0,46.0,1 to 3 months
+180 days to 210 days,6.15,SBI,180.0,180.0,3 to 6 months
+211 days to less than 1 year,6.40,SBI,211.0,211.0,6 months to 1 year
+1 Year to less than 2 years,6.75,SBI,365.0,365.0,6 months to 1 year
+2 years to less than 3 years,6.95,SBI,730.0,730.0,1 to 2 years
+3 years to less than 5 years,6.80,SBI,1095.0,1095.0,2 to 3 years
+5 years and up to 10 years,7.05*,SBI,1825.0,1825.0,3 to 5 years
+7-45 Days,3.90%,Union Bank,7.0,45.0,Less than 1 month
+46-90 Days,4.90%,Union Bank,46.0,90.0,1 to 3 months
+91-120 Days,5.20%,Union Bank,91.0,120.0,3 to 6 months
+121-180 Days,5.40%,Union Bank,121.0,180.0,3 to 6 months
+181 Days to < 1 Year,6.65%,Union Bank,181.0,181.0,6 months to 1 year
+1 year,6.90%,Union Bank,365.0,365.0,6 months to 1 year
+>1 year to 996 Days,7.00%,Union Bank,365.0,996.0,1 to 2 years
+997 Days,6.80%,Union Bank,997.0,997.0,2 to 3 years
+>998 Days to less than 3 Year,7.00%,Union Bank,998.0,998.0,2 to 3 years
+3 years,7.10%,Union Bank,1095.0,1095.0,2 to 3 years
+> 3 Year to 10 years,6.90%,Union Bank,1095.0,3650.0,Over 5 years
