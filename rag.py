@@ -16,7 +16,7 @@ from dotenv import load_dotenv
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
 if not GEMINI_API_KEY:
-    raise RuntimeError("❌ GEMINI_API_KEY not found. Please set it in your .env file.")
+    raise RuntimeError(" GEMINI_API_KEY not found. Please set it in your .env file.")
 genai.configure(api_key=GEMINI_API_KEY)
 
 # ==========================================
@@ -262,16 +262,16 @@ def answer_query(df, query, top_k=5):
 
 def initailize_rag():
     df = load_fd_data()
-    print(f"✅ Loaded {len(df)} FD records from database.")
+    print(f" Loaded {len(df)} FD records from database.")
 
     texts, metadatas, ids = prepare_chunks_and_metadata(df)
-    print(f"✅ Prepared {len(texts)} text chunks with metadata.")
+    print(f"Prepared {len(texts)} text chunks with metadata.")
 
     stored = store_in_vector_db_if_empty(texts, metadatas, ids)
     if stored:
-        print("✅ Generated embeddings and stored them in Chroma.")
+        print("Generated embeddings and stored them in Chroma.")
     else:
-        print("ℹ️ Chroma collection already had data — skipping store.")
+        print("Chroma collection already had data — skipping store.")
     
     return df
 
@@ -291,6 +291,6 @@ def get_fd_answer(df,query):
 # 🔹 Main Flow
 # ==========================================
 if __name__ == "__main__":
-    print("🔍 Building FD Rate RAG Agent...")
+    print("Building FD Rate RAG Agent...")
 
     
