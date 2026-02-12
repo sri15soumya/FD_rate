@@ -11,7 +11,7 @@ import google.generativeai as genai
 from dotenv import load_dotenv
 
 # ==========================================
-# 🔹 Load environment variables
+#  Load environment variables
 # ==========================================
 load_dotenv()
 GEMINI_API_KEY = os.getenv("GEMINI_API_KEY")
@@ -20,8 +20,7 @@ if not GEMINI_API_KEY:
 genai.configure(api_key=GEMINI_API_KEY)
 
 # ==========================================
-# 🔹 Connect to MySQL database
-# (make sure db has numeric min_ten/max_ten in DAYS)
+#  Connect to MySQL database
 # ==========================================
 engine = create_engine("mysql+mysqlconnector://root:soumya%40150905@localhost/fd_rates_db")
 
@@ -41,7 +40,7 @@ def load_fd_data():
     return df
 
 # ==========================================
-# 🔹 Query-to-days parser (user input normalization)
+# Query-to-days parser 
 # ==========================================
 def clean_metadata(meta_list):
     cleaned = []
@@ -140,7 +139,7 @@ def parse_query_to_days(q: str):
     return (None, None)
 
 # ==========================================
-# 🔹 Numeric overlap retrieval (preferred)
+#  Numeric overlap retrieval 
 # ==========================================
 def numeric_retrieval(df, q_min, q_max, top_k=5):
     """
@@ -189,7 +188,7 @@ def prepare_chunks_and_metadata(df):
     return texts, metadatas, ids
 
 # ==========================================
-# 🔹 Chroma init + store
+# Chroma init + store
 # ==========================================
 chroma_client = chromadb.Client(Settings(anonymized_telemetry=False))
 collection = chroma_client.get_or_create_collection(name="fd_rates")
@@ -215,7 +214,7 @@ def semantic_retrieval(query, top_k=5):
     return [], []
 
 # ==========================================
-# 🔹 Gemini answer generation (context + query)
+#  Gemini answer generation (context + query)
 # ==========================================
 def generate_answer_from_context(context_text, query):
     prompt = f"""You are an intelligent assistant that helps users compare Indian Fixed Deposit (FD) rates.
@@ -233,7 +232,7 @@ Provide a clear, factual, and helpful answer."""
     return response.text
 
 # ==========================================
-# 🔹 Top-level query handling (numeric-first, fallback to semantic)
+# Top-level query handling (numeric-first, fallback to semantic)
 # ==========================================
 def answer_query(df, query, top_k=5):
     # parse user query for numeric days
@@ -288,7 +287,7 @@ def get_fd_answer(df,query):
         
 
 # ==========================================
-# 🔹 Main Flow
+# Main Flow
 # ==========================================
 if __name__ == "__main__":
     print("Building FD Rate RAG Agent...")
