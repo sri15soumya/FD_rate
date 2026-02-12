@@ -92,7 +92,7 @@
             button.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Thinking...';
             button.disabled = true;
 
-            resultDiv.textContent = "🔍 Fetching answer...";
+            resultDiv.textContent = "Fetching answer...";
             responseBox.style.display = 'block';
 
             try {
@@ -107,12 +107,12 @@
                 const data = await response.json();
 
                 if (data.error) {
-                    resultDiv.textContent = "❌ " + data.error;
+                    resultDiv.textContent = data.error;
                 } else {
-                    resultDiv.textContent = data.answer || "❌ No relevant answer found.";
+                    resultDiv.textContent = data.answer || "No relevant answer found.";
                 }
             } catch (error) {
-                resultDiv.textContent = "❌ Error fetching response. Please try again.";
+                resultDiv.textContent = "Error fetching response. Please try again.";
                 console.error("Error:", error);
             } finally {
                 // Reset button
