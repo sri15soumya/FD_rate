@@ -363,4 +363,4 @@ if __name__ == "__main__":
 
         combined_df.to_csv("senior_citizen_fd_rates.csv", index=False)
         insert_fd_rates_sqlalchemy(combined_df)
-        print("✅ Scraping, saving to CSV, and database insertion complete!")
+        print("Scraping, saving to CSV, and database insertion complete!")
