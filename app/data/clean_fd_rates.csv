@@ -1,0 +1,48 @@
+tenure,senior_citizen_rate,bank,generalized_tenure,clean_min_days,clean_max_days
+7 days to 45 days,3.25,ICICI BANK,Less than 1 month,7.0,45.0
+46 days to 90 days,4.5,ICICI BANK,1 to 3 months,46.0,90.0
+91 days to 184 days,5.0,ICICI BANK,3 to 6 months,91.0,184.0
+185 days to less than 1 year,6.0,ICICI BANK,6 months to 1 year,185.0,364.0
+1 year to less than 18 months,6.75,ICICI BANK,1 to 2 years,365.0,539.0
+18 months to 2 years,6.8,ICICI BANK,1 to 2 years,540.0,730.0
+2 Years 1 Day to 3 Years,6.95,ICICI BANK,2 to 3 years,731.0,1095.0
+3 Years 1 Day to 5 Years,7.1,ICICI BANK,3 to 5 years,1096.0,1825.0
+5 Years 1 Day to 10 Years,7.0,ICICI BANK,Over 5 years,1826.0,3650.0
+7 - 14 Days,3.25,KOTAK MAHINDRA BANK,Less than 1 month,7.0,14.0
+15 - 30 Days,3.5,KOTAK MAHINDRA BANK,Less than 1 month,15.0,30.0
+31 - 45 Days,3.75,KOTAK MAHINDRA BANK,1 to 3 months,31.0,45.0
+46 - 90 Days,4.0,KOTAK MAHINDRA BANK,1 to 3 months,46.0,90.0
+91 Days,5.5,KOTAK MAHINDRA BANK,3 to 6 months,91.0,91.0
+92 - 179 days,4.75,KOTAK MAHINDRA BANK,3 to 6 months,92.0,179.0
+180 Days,7.0,KOTAK MAHINDRA BANK,3 to 6 months,180.0,180.0
+181 Days to 269 Days,6.5,KOTAK MAHINDRA BANK,6 months to 1 year,181.0,269.0
+270 Days,6.5,KOTAK MAHINDRA BANK,6 months to 1 year,270.0,270.0
+271 Days to 363 Days,6.5,KOTAK MAHINDRA BANK,6 months to 1 year,271.0,363.0
+364 Days,7.0,KOTAK MAHINDRA BANK,6 months to 1 year,364.0,364.0
+365 Days to 389 Days,7.0,KOTAK MAHINDRA BANK,1 to 2 years,365.0,389.0
+23 Months,7.45,KOTAK MAHINDRA BANK,1 to 2 years,690.0,690.0
+3 years and above but less than 4 years,7.25,KOTAK MAHINDRA BANK,3 to 5 years,1095.0,1459.0
+4 years and above but less than 5 years,7.25,KOTAK MAHINDRA BANK,3 to 5 years,1460.0,1824.0
+5 years and above up to and inclusive of 10 years,6.7,KOTAK MAHINDRA BANK,Over 5 years,1825.0,3650.0
+46 days to 179 days,5.4,SBI,3 to 6 months,46.0,179.0
+180 days to 210 days,6.15,SBI,6 months to 1 year,180.0,210.0
+211 days to less than 1 year,6.4,SBI,6 months to 1 year,211.0,364.0
+1 Year to less than 2 years,6.75,SBI,1 to 2 years,365.0,729.0
+2 years to less than 3 years,6.9,SBI,2 to 3 years,730.0,1094.0
+3 years to less than 5 years,6.8,SBI,3 to 5 years,1095.0,1824.0
+7-14 Days,3.25,UNION BANK,Less than 1 month,7.0,14.0
+15 -30 Days,3.5,UNION BANK,Less than 1 month,15.0,30.0
+31-45 Days,3.75,UNION BANK,1 to 3 months,31.0,45.0
+46 -90 Days,4.9,UNION BANK,1 to 3 months,46.0,90.0
+91-120 Days,2.25,UNION BANK,3 to 6 months,91.0,120.0
+121-180 Days,5.5,UNION BANK,3 to 6 months,121.0,180.0
+181-270 days,6.25,UNION BANK,6 months to 1 year,181.0,270.0
+271-364 days,6.5,UNION BANK,6 months to 1 year,271.0,364.0
+1 Year,6.75,UNION BANK,6 months to 1 year,365.0,365.0
+> 1 Year to 399 days,6.7,UNION BANK,1 to 2 years,365.0,399.0
+400 days,6.8,UNION BANK,1 to 2 years,400.0,400.0
+401 Days to 2 Year,6.5,UNION BANK,1 to 2 years,401.0,730.0
+>2 Year to 996 days,6.5,UNION BANK,2 to 3 years,730.0,996.0
+997 days,6.45,UNION BANK,2 to 3 years,997.0,997.0
+998 Days to 3 year,6.5,UNION BANK,2 to 3 years,998.0,1095.0
+> 3 Year to 10 year,6.4,UNION BANK,Over 5 years,1095.0,3650.0
